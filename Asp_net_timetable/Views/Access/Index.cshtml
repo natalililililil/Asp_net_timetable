@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4 class="display-4"><br></h4>
+
+<div class="text-center">
+    @*<h4 class="display-4">Режим "Пользователь"</h4>*@
+    <div class="bs-component">
+        <ul class="nav nav-tabs">
+            <li class="nav-item active">
+                @Html.ActionLink("Пользователь", "Index", "Access")
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Администратор", "Admin", "Access")
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h4 class="display-4"></h4>
+
+<div class="card mb-3" style="max-width: 1000px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://sun9-78.userapi.com/impg/YD8bo3XHK77hXxxD-JUQlAHMnnyzHLO_11fZXQ/shUU16JOP5w.jpg?size=573x572&quality=96&sign=8aec64ad84d80a4e78c4b3eba113dabc&type=album" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"><b>Пользователь</b></h5>
+                <p class="card-text">Возможности: <br> - Просматривать расписание <br> - Скачивать любое расписание в формате .pdf</p>
+
+                <p class="card-text"><small class="text-muted">Если хотели расширить свои права, перейдите в режим "Администратора"</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

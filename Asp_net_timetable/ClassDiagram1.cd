@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Asp_net_timetable.Controllers.GroupMSController">
+    <Position X="6.5" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAYAAgEAAAAIEAQAAkAACAAAAA=</HashCode>
+      <FileName>Controllers\GroupMSController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Asp_net_timetable.Models.GroupMSModel">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABAAAAAAAAAAAAACAAAAAAAAAAAABBAABAkA=</HashCode>
+      <FileName>Models\GroupMSModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Web.Mvc.Controller" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.148" />
+  </Class>
+  <Class Name="Asp_net_timetable.Controllers.AccessController">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AccessController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Asp_net_timetable.Controllers.AccountController">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAACAAAAAEAgAAAAAAAAAAAAAAQAAQIgAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Asp_net_timetable.Models.LoginViewModel">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgA=</HashCode>
+      <FileName>Models\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Asp_net_timetable.Models.SignUpModel">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAgA=</HashCode>
+      <FileName>Models\SignUpModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Asp_net_timetable.Controllers.HomeController">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

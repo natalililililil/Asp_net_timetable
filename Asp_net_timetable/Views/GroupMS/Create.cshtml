@@ -1,0 +1,176 @@
+﻿@model Asp_net_timetable.Models.GroupMSModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+
+@using (Html.BeginForm())
+{
+    @*@Html.AntiForgeryToken()*@
+
+    <div class="form-horizontal">
+        <div class="text-center">
+            <h3><br>Изменить расписание группы МС-5</h3>
+        </div>
+
+        @*<hr />*@
+        <div class="bs-component">
+            <div class="alert alert-dismissible alert-primary">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Важно!</strong>
+                <p class="mb-0">Во избежании неполадок данные вводить как в примере</p>
+            </div>
+        </div>
+
+        <h4><br>Пример:</h4>
+
+      
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col order-last">
+                    <div class="form-group has-success">
+
+                        <label class="form-label mt-4" for="inputValid">lecture_room</label>
+                        <input type="text" value="2/103..." class="form-control is-valid" id="inputValid">
+
+                        <label class="form-label mt-4" for="inputValid">subgroup</label>
+                        <input type="text" value="Первая/Вторая" class="form-control is-valid" id="inputValid">
+
+
+                        <div class="valid-feedback">Все данные верны!</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+                        <div class="form-group has-success">
+                            <label class="form-label mt-4" for="inputValid">subject</label>
+                            <input type="text" value="ОИКСиС/СиБД ..." class="form-control is-valid" id="inputValid">
+
+                            <label class="form-label mt-4" for="inputValid">teacher</label>
+                            <input type="text" value="Дереченник" class="form-control is-valid" id="inputValid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col order-first">
+                    <div class="form-group has-success">
+
+                        <label class="form-label mt-4" for="inputValid">tipeOfWeek</label>
+                        <input type="text" value="Нижняя/Верхняя" class="form-control is-valid" id="inputValid">
+
+                        <label class="form-label mt-4" for="inputValid">dayOfWeek</label>
+                        <input type="text" value="Понедельник/Вторник ..." class="form-control is-valid" id="inputValid">
+
+                        <label class="form-label mt-4" for="inputValid">time</label>
+                        <input type="text" value="9:00 - 10:20 /..." class="form-control is-valid" id="inputValid">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <h2></h2>
+            <h4><br>Заполните данные:</h4>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.tipeOfWeek, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tipeOfWeek, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.tipeOfWeek, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.dayOfWeek, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.dayOfWeek, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.dayOfWeek, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.time, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.time, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.time, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.teacher, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.teacher, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.teacher, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.lecture_room, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.lecture_room, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.lecture_room, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.subgroup, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.subgroup, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.subgroup, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@*<div class="clearfix">
+    <img src="https://sun9-30.userapi.com/impg/QJpZtqtzfwMExNyMeG1EFjwuL4z44AeJF-9-3A/zE8VCEaqFq8.jpg?size=554x544&quality=96&sign=1d46d735f1c5aef403f6e04d4db43ee2&type=album" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+
+    <p>
+        A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+    </p>
+
+    <p>
+        As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+    </p>
+
+    <p>
+        And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+    </p>
+</div>*@
+
+
+
+
+
+<div>
+    @Html.ActionLink("Посмотреть измененное расписание", "Index", "GroupMS")
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

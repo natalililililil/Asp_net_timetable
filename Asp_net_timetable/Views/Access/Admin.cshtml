@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4 class="display-4"><br></h4>
+
+<div class="text-center">
+    <div class="bs-component">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                @Html.ActionLink("Пользователь", "Index", "Access")
+            </li>
+            <li class="nav-item active">
+                @Html.ActionLink("Администратор", "Admin", "Access")
+            </li>
+        </ul>
+    </div>
+</div>
+
+<h4 class="display-4"></h4>
+
+<div class="card mb-3" style="max-width: 1000px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://sun9-30.userapi.com/impg/QJpZtqtzfwMExNyMeG1EFjwuL4z44AeJF-9-3A/zE8VCEaqFq8.jpg?size=554x544&quality=96&sign=1d46d735f1c5aef403f6e04d4db43ee2&type=album" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"><b>Администратор</b></h5>
+                <p class="card-text">Возможности: <br> - Просматривать расписание <br> - Скачивать любое расписание в формате .pdf<br> - Редактировать расписание </p>
+                <br><br><button type="button" class="btn btn-light">@Html.ActionLink("Изменить расписание", "Create", "GroupMS")</button>
+
+                @*<p class="card-text"><small class="text-muted">Если хотели расширить свои права, перейдите в режим "Администратора"</small></p>*@
+            </div>
+        </div>
+    </div>
+</div>
+

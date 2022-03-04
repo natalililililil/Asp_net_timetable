@@ -1,0 +1,167 @@
+﻿@model IEnumerable<Asp_net_timetable.Models.GroupMSModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string dayname = null;
+    string timename = null;
+    bool week_used;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Расписание занятий</h1>
+    <h4>Первая подгруппа нижняя неделя</h4>
+    <div class="bs-component">
+        <ul class="nav nav-tabs">
+            <li class="nav-item active">
+                @Html.ActionLink("Первая подгруппа", "Index", "GroupMS")
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Вторая подгруппа", "Index_Second", "GroupMS")
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">9:00 - 10:20</th>
+            <th scope="col">10:20 - 12:00</th>
+            <th scope="col">12:10 - 13:30</th>
+            <th scope="col">14:00 - 15:20</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+                week_used = true;
+                timename = Convert.ToString(item.dayOfWeek);
+                <tr>
+                    @foreach (var data in Model)
+                    {
+                        if (Convert.ToString(item.dayOfWeek) != dayname)
+                        {
+                            <th scope="row">@Html.DisplayFor(modelItem => item.dayOfWeek)</th>
+                            dayname = Convert.ToString(item.dayOfWeek);
+                            week_used = false;
+                        }
+                        if (Convert.ToString(data.dayOfWeek) == timename && week_used == false)
+                        {
+                            <td>
+                                @Html.DisplayFor(modelItem => data.subject)<br>
+                                @Html.DisplayFor(modelItem => data.teacher)
+                                @Html.DisplayFor(modelItem => data.lecture_room)
+                                @*@Html.DisplayFor(modelItem => data.subgroup)*@
+                            </td>
+                        }
+                    }
+                </tr>
+        }
+
+
+
+
+    </tbody>
+</table>
+
+
+<p>
+    <a href="GeneratePdf">Скачать (.pdf)</a>
+</p>
+
+
+<div>
+    <ul class="pagination">
+        <li class="page-item disabled">
+            <a class="page-link" href="#">«</a>
+        </li>
+        <li class="page-item active">
+            @Html.ActionLink("Нижняя неделя", "Index", "GroupMS")
+        </li>
+        <li class="page-item">
+            @Html.ActionLink("Верхняя неделя", "IndexTop", "GroupMS")
+        </li>
+        <li class="page-item">
+            <a class="page-link" href="#">»</a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.tipeOfWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dayOfWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teacher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lecture_room)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subgroup)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tipeOfWeek)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dayOfWeek)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.teacher)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lecture_room)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.subgroup)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+
+        }
+
+    </table>*@
+
+
+
+
