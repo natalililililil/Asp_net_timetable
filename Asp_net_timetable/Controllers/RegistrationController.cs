@@ -138,8 +138,8 @@ namespace Asp_net_timetable.Controllers
             //    ModelState.AddModelError(string.Empty, "Данный пользователь существует");
             //else
             
-                PushResponse response = clientic.Push("Registration/Kaka/", data);
-                SetResponse setResponse = clientic.Set("Registration/Kaka/" + data.email, data);
+            PushResponse response = clientic.Push("Registration/Kaka/", data);
+            SetResponse setResponse = clientic.Set("Registration/Kaka/" + data.email, data);
             
         }
     }
