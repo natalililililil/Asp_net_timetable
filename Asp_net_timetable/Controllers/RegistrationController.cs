@@ -24,7 +24,7 @@ namespace Asp_net_timetable.Controllers
         public ActionResult Index()
         {
             clientic = new FireSharp.FirebaseClient(config);
-            FirebaseResponse response = clientic.Get("Registration/Kaka/");
+            FirebaseResponse response = clientic.Get("Registration/");
             dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
             //var array = new string[100];
             var list = new List<Login>();
@@ -138,8 +138,8 @@ namespace Asp_net_timetable.Controllers
             //    ModelState.AddModelError(string.Empty, "Данный пользователь существует");
             //else
             
-            PushResponse response = clientic.Push("Registration/Kaka/", data);
-            SetResponse setResponse = clientic.Set("Registration/Kaka/" + data.email, data);
+            PushResponse response = clientic.Push("Registration/", data);
+            SetResponse setResponse = clientic.Set("Registration/" + data.email, data);
             
         }
     }

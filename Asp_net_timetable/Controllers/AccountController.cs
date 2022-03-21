@@ -32,7 +32,8 @@ namespace Asp_net_timetable.Controllers
                 var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
 
                 var a = await auth.CreateUserWithEmailAndPasswordAsync(model.Email, model.Password, model.Name, true);
-                ModelState.AddModelError(string.Empty, "Пожалуйста, подтвердите свой адрес электронной почты, затем выполнитете вход заново");
+                ModelState.AddModelError(string.Empty, "Пожалуйста, подтвердите свой адрес электронной почты, хотя кому это надо, так что просто нажми на перейти на сайт");
+
             }
             catch (Exception ex)
             {
