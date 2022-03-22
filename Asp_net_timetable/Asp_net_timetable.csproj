@@ -355,8 +355,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\SignUp.cshtml" />
@@ -368,7 +366,6 @@
     <Content Include="Views\GroupMS\Index_Top_Second.cshtml" />
     <Content Include="Views\GroupPE\Index.cshtml" />
     <Content Include="Views\GroupPE\Create.cshtml" />
-    <Content Include="Views\Home\GetSimples.cshtml" />
     <Content Include="Views\Access\Index.cshtml" />
     <Content Include="Views\Access\Admin.cshtml" />
   </ItemGroup>
