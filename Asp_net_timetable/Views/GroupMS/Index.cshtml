@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Asp_net_timetable.Models.GroupMSModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Группа МС-5";
     Layout = "~/Views/Shared/_Layout.cshtml";
     string dayname = null;
     string timename = null;
@@ -22,9 +22,6 @@
         </ul>
     </div>
 </div>
-
-
-
 
 
 <table class="table table-bordered">
@@ -71,11 +68,9 @@
     </tbody>
 </table>
 
-
 <p>
     <a href="GeneratePdf">Скачать (.pdf)</a>
 </p>
-
 
 <div>
     <ul class="pagination">
@@ -93,75 +88,3 @@
         </li>
     </ul>
 </div>
-
-
-
-
-@*<p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.tipeOfWeek)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dayOfWeek)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.subject)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.teacher)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.lecture_room)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.subgroup)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.tipeOfWeek)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.dayOfWeek)
-
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.time)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.subject)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.teacher)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.lecture_room)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.subgroup)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                </td>
-            </tr>
-
-        }
-
-    </table>*@
-
-
-
-

@@ -303,10 +303,8 @@
     <Compile Include="Controllers\AccessController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GroupMSController.cs" />
-    <Compile Include="Controllers\GroupPEController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\RegistrationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -344,6 +342,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\site.js" />
+    <Content Include="Views\Shared\LinkStale.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -354,8 +353,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Account\SignUp.cshtml" />
@@ -365,9 +362,6 @@
     <Content Include="Views\GroupMS\IndexTop.cshtml" />
     <Content Include="Views\GroupMS\Index_Second.cshtml" />
     <Content Include="Views\GroupMS\Index_Top_Second.cshtml" />
-    <Content Include="Views\GroupPE\Index.cshtml" />
-    <Content Include="Views\GroupPE\Create.cshtml" />
-    <Content Include="Views\Home\GetSimples.cshtml" />
     <Content Include="Views\Access\Index.cshtml" />
     <Content Include="Views\Access\Admin.cshtml" />
   </ItemGroup>

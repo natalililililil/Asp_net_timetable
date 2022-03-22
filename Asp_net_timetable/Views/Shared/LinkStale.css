@@ -1,0 +1,19 @@
+﻿body {
+    
+}
+
+a.my-class {
+    color: Yellow
+}
+
+    a.my-class:active {
+        color: Yellow
+    }
+
+    a.my-class:link {
+        color: Yellow
+    }
+
+    a.my-class:visited {
+        color: Yellow
+    }
