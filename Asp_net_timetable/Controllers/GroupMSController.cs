@@ -20,21 +20,21 @@ namespace Asp_net_timetable.Controllers
 
         IFirebaseClient infa;
         // GET: Login
+
         public ActionResult Index()
         {
             infa = new FireSharp.FirebaseClient(config);
             FirebaseResponse response = infa.Get("GroupMS_Нижняя_Первая/");
             //FirebaseResponse response = infa.Get(data.dayOfWeek + " / " + data.time);
             dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
-            var list = new List<GroupMSModel>();           
+            var list = new List<GroupMSModel>();
             foreach (var item in data)
             {
                 list.Add(JsonConvert.DeserializeObject<GroupMSModel>(((JProperty)item).Value.ToString()));
             }
             list.Reverse();
             return View(list);
-        }
-
+        }       
 
         public ActionResult IndexTop()
         {
@@ -177,10 +177,8 @@ namespace Asp_net_timetable.Controllers
             SetResponse setResponse = infa.Set(link + data.id, data);
         }
 
-
         public ActionResult GeneratePdf()
         {
-
             return new Rotativa.ActionAsPdf("Index");
         }
 
@@ -198,7 +196,5 @@ namespace Asp_net_timetable.Controllers
         {
             return new Rotativa.ActionAsPdf("Index_Top_Second");
         }
-
-
     }
 }

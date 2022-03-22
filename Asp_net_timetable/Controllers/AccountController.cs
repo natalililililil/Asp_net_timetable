@@ -129,25 +129,6 @@ namespace Asp_net_timetable.Controllers
                 throw ex;
             }
         }
-
-        private void ClaimIdentities(string username, bool isPersistent)
-        {
-            // Initialization.
-            var claims = new List<Claim>();
-            try
-            {
-                // Setting
-                claims.Add(new Claim(ClaimTypes.Name, username));
-                var claimIdenties = new ClaimsIdentity(claims, DefaultAuthenticationTypes.ApplicationCookie);
-
-            }
-            catch (Exception ex)
-            {
-                // Info
-                throw ex;
-            }
-        }
-
         private ActionResult RedirectToLocal(string returnUrl)
         {
             try

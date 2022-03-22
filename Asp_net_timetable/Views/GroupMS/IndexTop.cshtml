@@ -54,7 +54,6 @@
                             @Html.DisplayFor(modelItem => data.subject)<br>
                             @Html.DisplayFor(modelItem => data.teacher)
                             @Html.DisplayFor(modelItem => data.lecture_room)
-                            @*@Html.DisplayFor(modelItem => data.subgroup)*@
                         </td>
                     }
                 }
@@ -62,11 +61,6 @@
         }
     </tbody>
 </table>
-
-
-@*<p>
-    <a href="GeneratePdf">Скачать (.pdf)</a>
-</p>*@
 
 <p>
     <a href="GeneratePdfTop">Скачать (.pdf)</a>
@@ -83,20 +77,8 @@
         <li class="page-item active">
             @Html.ActionLink("Верхняя неделя", "IndexTop", "GroupMS")
         </li>
-        @*<li class="page-item">
-                @Html.ActionLink("Вторая подгруппа", "Index", "GroupMS", low_week = "Верхняя")
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">5</a>
-            </li>*@
         <li class="page-item">
             <a class="page-link" href="#">»</a>
         </li>
-
-
-
     </ul>
 </div>
