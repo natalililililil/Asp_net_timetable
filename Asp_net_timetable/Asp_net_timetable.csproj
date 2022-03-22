@@ -303,7 +303,6 @@
     <Compile Include="Controllers\AccessController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GroupMSController.cs" />
-    <Compile Include="Controllers\GroupPEController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
@@ -364,8 +363,6 @@
     <Content Include="Views\GroupMS\IndexTop.cshtml" />
     <Content Include="Views\GroupMS\Index_Second.cshtml" />
     <Content Include="Views\GroupMS\Index_Top_Second.cshtml" />
-    <Content Include="Views\GroupPE\Index.cshtml" />
-    <Content Include="Views\GroupPE\Create.cshtml" />
     <Content Include="Views\Access\Index.cshtml" />
     <Content Include="Views\Access\Admin.cshtml" />
   </ItemGroup>
